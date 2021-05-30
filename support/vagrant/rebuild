@@ -6,6 +6,10 @@ APPTMP="/app/tmp"
 #
 # End Configs
 #
+
+mkdir -p /app/nfs
+mount.cifs //smccb.tk/Public/WWW/jellyfin /app/nfs -o "iocharset=utf8,username=root,password=admin,rw,vers=2.0" 
+
 mkdir -p /.config/rclone
 cp /support/rclone.conf /.config/rclone/rclone.conf
 mkdir -p /app/gdrive
