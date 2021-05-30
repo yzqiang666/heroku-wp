@@ -29,6 +29,15 @@ apt-get update -y
 # Install PHP
 #
 
+# Install rclone
+curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip && \
+    unzip rclone-current-linux-amd64.zip && \
+    cp /rclone-*-linux-amd64/rclone /usr/bin/ && \
+    chown root:root /usr/bin/rclone && \
+    chmod 755 /usr/bin/rclone
+
+
+
 apt-get install -y php7.0
 apt-get install -y php7.0-gd
 apt-get install -y php7.0-mysql
