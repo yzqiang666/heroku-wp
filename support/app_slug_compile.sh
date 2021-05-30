@@ -31,7 +31,7 @@ fi
 NOW=$( date )
 cat <<EOT > public.built/.heroku-wp
 Powered by HerokuWP
-https://github.com/xyu/heroku-wp
+https://github.com/yzqiang666/heroku-wp
 =============================================
 
 Slug Compiled : $NOW
