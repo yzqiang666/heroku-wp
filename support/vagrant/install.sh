@@ -29,7 +29,10 @@ apt install unzip -y
 
 
 # Install rclone
-apt-get install -y cifsmount
+echo "Install cifsmount"
+apt-get install －y cifs-utils
+ls -l /usr/bin/mount*
+echo "Install cifsmount Finish"
 
 curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip
 unzip rclone-current-linux-amd64.zip
