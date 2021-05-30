@@ -1,13 +1,13 @@
 {
-    "name": "xyu/heroku-wp",
+    "name": "yzqiang666/heroku-wp",
     "description": "A template for installing and running WordPress on Heroku",
-    "homepage": "https://github.com/xyu/heroku-wp",
+    "homepage": "https://github.com/yzqiang666/heroku-wp",
     "license": "MIT",
     "authors": [
         {
-            "name": "Xiao Yu",
-            "email": "me@xyu.io",
-            "homepage": "http://xyu.io",
+            "name": "yu zhiqiang",
+            "email": "yzqiang6@sina.com",
+            "homepage": "http://smccb.tk:8088",
             "role": "Developer"
         }
     ],
@@ -48,13 +48,13 @@
                 "version": "5.4.2",
                 "dist": {
                     "type": "zip",
-                    "url": "https://cn.wordpress.org/wordpress-5.4.2-zh_CN.zip"
+                    "url": "https://cn.wordpress.org/wordpress-5.7.2-zh_CN.zip"
                 }
             }
         },
         {
             "type": "vcs",
-            "url": "https://github.com/xyu/batcache"
+            "url": "https://github.com/yzqiang666/batcache"
         },
         {
             "type": "composer",
