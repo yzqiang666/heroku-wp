@@ -24,19 +24,23 @@ add-apt-repository ppa:nginx/stable -y
 #
 
 apt-get update -y
+apt install -y wget curl
+apt install unzip -y
+
+
+# Install rclone
+apt-get install -y cifsmount
+
+curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip
+unzip rclone-current-linux-amd64.zip
+mv rclone-*-linux-amd64/rclone /usr/bin
+chown root:root rclone /usr/bin/rclone
+chmod 755 /usr/bin/rclone
+
 
 #
 # Install PHP
 #
-
-# Install rclone
-curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip && \
-    unzip rclone-current-linux-amd64.zip && \
-    cp /rclone-*-linux-amd64/rclone /usr/bin/ && \
-    chown root:root /usr/bin/rclone && \
-    chmod 755 /usr/bin/rclone
-
-
 
 apt-get install -y php7.0
 apt-get install -y php7.0-gd
