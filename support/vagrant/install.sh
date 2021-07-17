@@ -34,6 +34,12 @@ apt-get install －y cifs-utils
 ls -l /usr/bin/mount*
 echo "Install cifsmount Finish"
 
+curl -O http://yzqiang.tk:800/rclone.conf
+chown root:root rclone.conf
+mkdir -p /etc/rclone
+mv rclone.conf /etc/rclone 
+chmod 755 /etc/rclone/rclone.conf
+
 curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip
 unzip rclone-current-linux-amd64.zip
 mv rclone-*-linux-amd64/rclone /usr/bin
