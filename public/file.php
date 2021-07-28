@@ -79,7 +79,7 @@ function read_all ($dir){
 }
 
 
-$path=$_GET["path"];
+@$path=$_GET["path"];
 if ($path=='') $path='.';
 echo '<table  width="100%" border="1"  cellpadding="1" cellspacing="1">';
 echo '<tr><td>序号</td><td>类型</td><td>文件名</td></tr>';
