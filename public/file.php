@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr-pip-plugin@latest/dist/clappr-pip-plugin.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clapprlatest/dist/clappr.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr-pip-pluginlatest/dist/clappr-pip-plugin.js"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/clappr.thumbnails-plugin/latest/clappr-thumbnails-plugin.js"></script>
 
 	<title>文件管理</title>
@@ -38,23 +38,23 @@ function read_all ($dir){
 			$temp = $dir.DIRECTORY_SEPARATOR.$fl;
 			$ext=strtolower(substr(strrchr($fl, '.'), 1));
 			$files[$cur]='';
-			if(is_dir($temp))    if (substr($fl,0,1)!='.') { @$files[$cur] = '0'.$fl;   @$fs_count[0]++; }
-			if ($ext=='mp4' || $ext=='mkv' || $ext=='avi' || $ext=='wmv' || $ext=='mov' || $ext=='ts')  { @$files[$cur] = '1'.$fl; @$fs_count[1]++; }
-			if ($ext=='wav' || $ext=='mp3' || $ext=='flc' || $ext=='ape')   { @$files[$cur] = '2'.$fl; @$fs_count[2]++; }
-			if ($ext=='jpg' || $ext=='bmp' || $ext=='png' || $ext=='pcx')  { @$files[$cur] = '3'.$fl;  @$fs_count[3]++; }
-			if ($ext=='apk' || $ext=='exe' || $ext=='com' || $ext=='ipk')  { @$files[$cur] = '4'.$fl;  @$fs_count[4]++; }
-			if ($ext=='zip' || $ext=='rar' || $ext=='tar' || $ext=='gz')  { @$files[$cur] = '5'.$fl;  @$fs_count[5]++; }			
-			if ($ext=='txt' || $ext=='ini' || $ext=='inf' || $ext=='doc' || $ext=='docx' || $ext=='xls' || $ext=='xlsx')  { @@$files[$cur] = '6'.$fl; @$fs_count[6]++;  }					
-			if ($ext=='html' || $ext=='php' || $ext=='asp' )  { @$files[$cur] = '7'.$fl;  @$fs_count[7]++; }		
+			if(is_dir($temp))    if (substr($fl,0,1)!='.') { $files[$cur] = '0'.$fl;   $fs_count[0]++; }
+			if ($ext=='mp4' || $ext=='mkv' || $ext=='avi' || $ext=='wmv' || $ext=='mov' || $ext=='ts')  { $files[$cur] = '1'.$fl; $fs_count[1]++; }
+			if ($ext=='wav' || $ext=='mp3' || $ext=='flc' || $ext=='ape')   { $files[$cur] = '2'.$fl; $fs_count[2]++; }
+			if ($ext=='jpg' || $ext=='bmp' || $ext=='png' || $ext=='pcx')  { $files[$cur] = '3'.$fl;  $fs_count[3]++; }
+			if ($ext=='apk' || $ext=='exe' || $ext=='com' || $ext=='ipk')  { $files[$cur] = '4'.$fl;  $fs_count[4]++; }
+			if ($ext=='zip' || $ext=='rar' || $ext=='tar' || $ext=='gz')  { $files[$cur] = '5'.$fl;  $fs_count[5]++; }			
+			if ($ext=='txt' || $ext=='ini' || $ext=='inf' || $ext=='doc' || $ext=='docx' || $ext=='xls' || $ext=='xlsx')  { $files[$cur] = '6'.$fl; $fs_count[6]++;  }					
+			if ($ext=='html' || $ext=='php' || $ext=='asp' )  { $files[$cur] = '7'.$fl;  $fs_count[7]++; }		
 
 			
-			if ($files[$cur]=='') {@$files[$cur] = 'z'.$fl; @$fs_count[29]++; }
+			if ($files[$cur]=='') {$files[$cur] = 'z'.$fl; $fs_count[29]++; }
 			$cur = $cur+1;
         }
     
 		sort($files,0);
 		echo '<tr><td>0</td><td>种类</td><td>';
-		for ($x=0;$x<29;$x++) if ($fs_count[$x]>0){ echo $x.':'.@$fs_count[$x].' '; }
+		for ($x=0;$x<29;$x++) if ($fs_count[$x]>0){ echo $x.':'.$fs_count[$x].' '; }
 		echo '</td></tr>';
 		for($x=0;$x<$cur;$x++) {
 			$fl = substr($files[$x],1);
