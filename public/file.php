@@ -30,7 +30,7 @@ function read_all ($dir){
 	$fs_count = array();
 	$cur = 0;
     $handle = opendir($dir);
-
+    for ($x=0;$x<29;$x++) $fs_count[$x]=0;
     if($handle){
         while(($fl = readdir($handle)) !== false){
 			if($fl=='.DS_Store' ) continue;
@@ -53,9 +53,9 @@ function read_all ($dir){
         }
     
 		sort($files,0);
-//		echo '<tr><td>0</td><td>种类</td><td>';
-//		for ($x=0;$x<29;$x++) if ($fs_count[$x]>0){ echo $x.':'.@$fs_count[$x].' '; }
-//		echo '</td></tr>';
+		echo '<tr><td>0</td><td>种类</td><td>';
+		for ($x=0;$x<29;$x++) if ($fs_count[$x]>0){ echo $x.':'.@$fs_count[$x].' '; }
+		echo '</td></tr>';
 		for($x=0;$x<$cur;$x++) {
 			$fl = substr($files[$x],1);
 			$temp = $dir.DIRECTORY_SEPARATOR.$fl;
