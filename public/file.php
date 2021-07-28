@@ -48,7 +48,7 @@ function read_all ($dir){
 			if ($ext=='html' || $ext=='php' || $ext=='asp' )  { $files[$cur] = '7'.$fl;  $fs_count[7]++; }		
 
 			
-			if ($files[$cur]=='') {$files[$cur] = 'z'.$fl; $fs_count[29]++; }
+			if ($files[$cur]=='') {$files[$cur] = 'z'.$fl; $fs_count[28]++; }
 			$cur = $cur+1;
         }
     
