@@ -37,7 +37,7 @@ function read_all ($dir){
             if($fl=='.' || $fl == '..') continue;
 			$temp = $dir.DIRECTORY_SEPARATOR.$fl;
 			$ext=strtolower(substr(strrchr($fl, '.'), 1));
-			if ($ext=='html' || $ext=='php' || $ext=='asp' )  { continue; }		
+			if (  $ext=='php' || $ext=='asp' )  { continue; }		
 			$files[$cur]='';
 			if(is_dir($temp))    if (substr($fl,0,1)!='.') { $files[$cur] = '0'.$fl;   $fs_count[0]++; }
 			if ($ext=='mp4' || $ext=='mkv' || $ext=='avi' || $ext=='wmv' || $ext=='mov' || $ext=='ts')  { $files[$cur] = '1'.$fl; $fs_count[1]++; }
