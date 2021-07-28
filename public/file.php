@@ -45,17 +45,17 @@ function read_all ($dir){
 			if ($ext=='apk' || $ext=='exe' || $ext=='com' || $ext=='ipk')  { $files[$cur] = '4'.$fl;  $fs_count[4]++; }
 			if ($ext=='zip' || $ext=='rar' || $ext=='tar' || $ext=='gz')  { $files[$cur] = '5'.$fl;  $fs_count[5]++; }			
 			if ($ext=='txt' || $ext=='ini' || $ext=='inf' || $ext=='doc' || $ext=='docx' || $ext=='xls' || $ext=='xlsx')  { $files[$cur] = '6'.$fl; $fs_count[6]++;  }					
-			if ($ext=='html' || $ext=='php' || $ext=='asp' )  { $files[$cur] = '7'.$fl;  $fs_count[7]++; }		
+//			if ($ext=='html' || $ext=='php' || $ext=='asp' )  { $files[$cur] = '7'.$fl;  $fs_count[7]++; }		
 
 			
-			if ($files[$cur]=='') {$files[$cur] = 'z'.$fl; $fs_count[29]++; }
+//			if ($files[$cur]=='') {$files[$cur] = 'z'.$fl; $fs_count[29]++; }
 			$cur = $cur+1;
         }
     
 		sort($files,0);
 		echo '<tr><td>0</td><td>种类</td><td>';
-		for ($x=0;$x<29;$x++) if ($fs_count[$x]>0){ echo $x.':'.$fs_count[$x].' '; }
-		echo '</td></tr>';
+//		for ($x=0;$x<29;$x++) if ($fs_count[$x]>0){ echo $x.':'.$fs_count[$x].' '; }
+//		echo '</td></tr>';
 		for($x=0;$x<$cur;$x++) {
 			$fl = substr($files[$x],1);
 			$temp = $dir.DIRECTORY_SEPARATOR.$fl;
